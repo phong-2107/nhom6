@@ -1,0 +1,149 @@
+/* Reset CSS đơn giản */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header (thanh điều hướng) */
+  header {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+  }
+  header nav ul li {
+    margin-left: 20px;
+  }
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+  header nav ul li a:hover,
+  header nav ul li a.active {
+    color: #f0c040; /* Màu vàng nhạt khi hover hoặc active */
+  }
+  
+  /* Container chung cho nội dung */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    /* Ảnh nền, bạn có thể sửa link ảnh phù hợp */
+    background: url('https://picsum.photos/id/695/1600/900') no-repeat center center/cover;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Tạo lớp overlay mờ đen */
+  }
+  
+  .hero-content {
+    position: relative; /* Để “đè” lên overlay */
+    color: #fff;
+    text-align: center;
+    max-width: 600px;
+    z-index: 1; /* Để không bị overlay che mất */
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Nút chung */
+  .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f0c040;
+    color: #333;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  .btn:hover {
+    background-color: #daa520; /* Đậm hơn 1 chút khi hover */
+  }
+  
+  /* Biến thể nút màu sáng */
+  .btn-light {
+    background-color: #fff;
+    color: #333;
+  }
+  .btn-light:hover {
+    background-color: #ddd;
+  }
+  
+  /* Services */
+  .services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .service-item {
+    flex: 0 1 calc(33.333% - 20px); /* 3 cột, trừ khoảng cách */
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+  }
+  .service-item h3 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .service-item p {
+    color: #666;
+    line-height: 1.4;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .cta-section p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 0; /* Sẽ bám sát CTA Section */
+  }
+  
