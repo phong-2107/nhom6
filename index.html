@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang chủ</title>
+    <!-- Link CSS chung -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        /* Reset CSS đơn giản */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Header (thanh điều hướng) */
+        header {
+            background-color: #333;
+            padding: 10px 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        header nav ul li a:hover,
+        header nav ul li a.active {
+            color: #f0c040;
+            /* Màu vàng nhạt khi hover hoặc active */
+        }
+
+        /* Container chung cho nội dung */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            /* Ảnh nền, bạn có thể sửa link ảnh phù hợp */
+            background: url('https://picsum.photos/id/695/1600/900') no-repeat center center/cover;
+            height: 80vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            /* Tạo lớp overlay mờ đen */
+        }
+
+        .hero-content {
+            position: relative;
+            /* Để “đè” lên overlay */
+            color: #fff;
+            text-align: center;
+            max-width: 600px;
+            z-index: 1;
+            /* Để không bị overlay che mất */
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        /* Nút chung */
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #f0c040;
+            color: #333;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #daa520;
+            /* Đậm hơn 1 chút khi hover */
+        }
+
+        /* Biến thể nút màu sáng */
+        .btn-light {
+            background-color: #fff;
+            color: #333;
+        }
+
+        .btn-light:hover {
+            background-color: #ddd;
+        }
+
+        /* Services */
+        .services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .service-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .service-item {
+            flex: 0 1 calc(33.333% - 20px);
+            /* 3 cột, trừ khoảng cách */
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .service-item h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .service-item p {
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 0;
+            /* Sẽ bám sát CTA Section */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header / Menu điều hướng -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Trang chủ</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Đăng nhập</a></li>
+                <li><a href="register.html">Đăng ký</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Ảnh nền có thể đặt qua CSS, hoặc inline ở đây; mình dùng qua CSS -->
+        <div class="hero-content">
+            <h1>Chào mừng bạn đến với Website!</h1>
+            <p>Nơi cung cấp những dịch vụ hàng đầu và trải nghiệm tuyệt vời.</p>
+            <a href="about.html" class="btn">Tìm hiểu thêm</a>
+        </div>
+    </section>
+
+    <!-- Phần giới thiệu / dịch vụ -->
+    <section class="services container">
+        <h2>Dịch vụ tiêu biểu</h2>
+        <div class="service-list">
+            <div class="service-item">
+                <h3>Dịch vụ A</h3>
+                <p>Mô tả ngắn gọn về dịch vụ A. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="service-item">
+                <h3>Dịch vụ B</h3>
+                <p>Mô tả ngắn gọn về dịch vụ B. Donec aliquet dolor libero, eget venenatis mauris finibus dictum.</p>
+            </div>
+            <div class="service-item">
+                <h3>Dịch vụ C</h3>
+                <p>Mô tả ngắn gọn về dịch vụ C. Aliquam erat volutpat. Pellentesque facilisis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần CTA (Call To Action) -->
+    <section class="cta-section">
+        <h2>Bạn đã sẵn sàng trải nghiệm?</h2>
+        <p>Hãy liên hệ với chúng tôi hoặc đăng ký tài khoản để bắt đầu ngay hôm nay.</p>
+        <div>
+            <a href="contact.html" class="btn btn-light">Liên hệ</a>
+            <a href="register.html" class="btn">Đăng ký</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Company Name. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
