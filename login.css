@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2px;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    width: 400px;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.login-header p {
+    color: #666;
+    font-size: 15px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 18px;
+}
+
+.input-field i:first-child {
+    left: 15px;
+}
+
+.input-field i.show-password {
+    right: 15px;
+    cursor: pointer;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.1);
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.remember-forgot input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #667eea;
+}
+
+.remember-forgot a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.error {
+    animation: shake 0.5s ease-in-out;
+    border-color: #ff4b4b !important;
+} 
